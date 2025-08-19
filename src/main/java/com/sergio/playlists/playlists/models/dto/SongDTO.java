@@ -12,7 +12,7 @@ public class SongDTO {
     @NotBlank
     private String artist;
     private String album;
-    private Long year;
+    private Integer year;
     private String genre;
 
 }
