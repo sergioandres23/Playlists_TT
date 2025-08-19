@@ -55,7 +55,7 @@ public class PlaylistsServiceImpl implements PlaylistsService{
         }
 
         if (playlistRepository.findByName(name).isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Playlist doesn't exists");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Playlist doesn't exists");
         }
 
         else {
