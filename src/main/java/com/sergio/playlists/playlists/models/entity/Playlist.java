@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "playlists")
 public class Playlist {
 
     @Id
@@ -14,8 +15,8 @@ public class Playlist {
     private String description;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "playlist_nombre")
-    private List<Song> songs = new ArrayList<Song>();
+    @JoinColumn(name = "playlist_name")
+    private List<Song> songs = new ArrayList<>();
 
 
 
